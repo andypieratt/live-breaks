@@ -1,6 +1,9 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
+//Import schema from Card.js
+const cardSchema = require("./Card");
+
 const userSchema = new Schema(
   {
     username: {
@@ -25,6 +28,7 @@ const userSchema = new Schema(
         "Password needs: Minimum eight characters, at least one letter, one number and one special character",
       ],
     },
+    cards: [cardSchema],
   },
   {
     toJSON: {
@@ -46,6 +50,11 @@ userSchema.pre("save", async function (next) {
 userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
+
+//Query user with a field called 'cardCount' to see the number of cards a user has
+userSchema.virtual("cardCount").get(function () {
+  return this.cards.length;
+});
 
 const User = model("User", userSchema);
 
