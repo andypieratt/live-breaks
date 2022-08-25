@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 db.once("open", () => {
-  const http = app.listen(PORT, () => {
+  app.listen(PORT, () => {
     console.log(`Now running on ${PORT}`);
   });
 });
