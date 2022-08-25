@@ -1,0 +1,47 @@
+.header-container{
+  background-color: #111724;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
+.logo{
+  color: whitesmoke;
+  margin-right: 40rem;
+}
+
+.auth-item-container{
+  overflow: hidden;
+}
+
+.auth-item-wrap{
+  animation: move 10s ease-in-out infinite alternate;
+}
+
+.auth-item{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+@keyframes move {
+  25%{
+    transform: translateY(-12px);
+  }
+  50%{
+    transform: translateY(35px);
+  }
+  /* 75%{
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(50px);
+  } */
+}
+
+Button{
+  height: 2rem;
+}
