@@ -1,0 +1,13 @@
+.footer-main{
+  background-color: #111724;
+  padding: 2rem;
+  margin-top: 5rem;
+  height: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+a{
+  padding: 0.25rem;
+}

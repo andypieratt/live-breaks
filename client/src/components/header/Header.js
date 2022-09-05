@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./header.css";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 import { PropTypes } from "prop-types";
 
@@ -33,11 +34,17 @@ const Header = ({ text }) => {
     return () => clearInterval();
   }, [fadeToggle]);
 
+  const navigate = useNavigate();
+
+  const onClick = () => {
+    navigate("/login");
+  };
+
   return (
     <div className="header-container">
       <h3 className="logo">LIVE-BREAKZ</h3>
       <div className="auth-item-container">
-        <Button variant="contained" size="medium">
+        <Button onClick={onClick} variant="contained" size="medium">
           <div className="auth-item-container">
             <div className={fadeToggle.fade}>{textToggle.text}</div>
           </div>
