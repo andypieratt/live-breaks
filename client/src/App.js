@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import Login from "./components/login/Login";
 import Signup from "./components/signup/Signup";
+import Showcase from "./components/showcase/Showcase";
 import "./App.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/signup" element={<Signup />} />
+            <Route exact path="/showcase" element={<Showcase />} />
           </Routes>
         </div>
         <Footer />
