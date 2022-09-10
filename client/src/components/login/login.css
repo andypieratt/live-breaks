@@ -1,0 +1,25 @@
+a{
+  color: rgb(73, 159, 239);
+}
+
+input{
+  margin-bottom: 1rem;
+}
+
+label{
+  font-size: large;
+  margin-bottom: 2px;
+}
+
+.login-form-container{
+  color: whitesmoke;
+  padding: 5rem;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.signup-router{
+  color: whitesmoke;
+}

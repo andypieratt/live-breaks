@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./login.css";
 import { Button } from "@mui/material";
 
@@ -46,7 +46,6 @@ const Login = () => {
           value={loginFormData.email}
           onChange={handleInputChange}
         ></input>
-        <br></br>
         <label>Password</label>
         <input
           type="password"
@@ -59,12 +58,12 @@ const Login = () => {
         <Button variant="contained" size="large">
           Submit
         </Button>
+        <div className="signup-router">
+          <h4>
+            If you don't have an account, please <a href="/signup">Signup!</a>
+          </h4>
+        </div>
       </form>
-      <div className="singup-router">
-        <h4>
-          If you don't have an account, please <a href="/signup">Signup!</a>
-        </h4>
-      </div>
     </>
   );
 };
