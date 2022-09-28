@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Button } from "@mui/material";
+import "./signup.css";
 
 const Signup = () => {
   const [userFormData, setUserFormData] = useState({
@@ -18,8 +20,8 @@ const Signup = () => {
 
   return (
     <div>
-      <form>
-        <h4>Username</h4>
+      <form className="signup-form-container">
+        <label>Username</label>
         <input
           type="text"
           placeholder="username"
@@ -27,7 +29,7 @@ const Signup = () => {
           value={userFormData.username}
           required
         ></input>
-        <h4>Email</h4>
+        <label>Email</label>
         <input
           type="text"
           placeholder="email"
@@ -35,13 +37,17 @@ const Signup = () => {
           value={userFormData.email}
           required
         ></input>
-        <h4>Password</h4>
+        <label>Password</label>
         <input
           type="password"
           onChange={handleInputChange}
           value={userFormData.password}
           required
         ></input>
+        <br></br>
+        <Button variant="contained" size="large">
+          Submit
+        </Button>
       </form>
     </div>
   );
