@@ -1,0 +1,17 @@
+input {
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: large;
+  margin-bottom: 2px;
+}
+
+.signup-form-container {
+  color: whitesmoke;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
